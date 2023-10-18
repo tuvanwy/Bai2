@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Number One Triangle</h2>
+
+    <p>Enter a number between 1 and 10:</p>
+
+    <input type="number" id="num" name="num" min="1" max="10" />
+
+    <button onclick="numberOneTriangle()">Submit</button>
+
+    <p id="triangle"></p>
+
+    <script>
+      function numberOneTriangle() {
+        var num = document.getElementById("num").value;
+        var triangle = "";
+        for (var i = 1; i <= num; i++) {
+          for (var j = 1; j <= i; j++) {
+            triangle += "* ";
+          }
+          triangle += "<br>";
+        }
+        document.getElementById("triangle").innerHTML = triangle;
+      }
+    </script>
+  </body>
+</html>
